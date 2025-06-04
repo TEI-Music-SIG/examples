@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>Minimal Example: CETEIcean and Verovio</title>
+			</titleStmt>
+			<publicationStmt>
+				<p/>
+			</publicationStmt>
+			<sourceDesc>
+				<p/>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<head>Minimal Example: CETEIcean and Verovio</head>
+			<div>
+				<p>Lorem ipsum</p>
+			</div>
+			<!-- @rend triggers Verovio -->
+			<!-- @xml:id needs to correspond to the MEI filename -->
+			<notatedMusic rend="MEI" xml:id="music1"/>
+			<div>
+				<p>dolor sit amet</p>
+			</div>
+			<notatedMusic rend="MEI" xml:id="music2"/>
+			<div>
+				<p>consectetur adipiscing elit</p>
+			</div>
+		</body>
+	</text>
+</TEI>
