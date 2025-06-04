@@ -4,6 +4,27 @@ This is a collection of examples, covering various usecases for MEI encoded musi
 
 ## CETEIcean and Verovio
 
-[ceteicean-verovio](ceteicean-verovio) contains a minimal example that allows using [CETEIcean](https://teic.github.io/CETEIcean) and [Verovio](https://www.verovio.org) together. It requires a simple webserver to work.
+[ceteicean-verovio](ceteicean-verovio) contains a minimal example that allows using [CETEIcean](https://teic.github.io/CETEIcean) and [Verovio](https://www.verovio.org) together.
 
-**How to customize:** TEI elements are rendered by CETEIcean. The individual styles can be edited in `css/custom.css`. The music notation is kept in separate MEI files in the `mei`folder. The corresponding filenames in the TEI file are given in `@xml:id` of the `<notatedMusic>` elements. `@rend="MEI"` is a trigger to hand over renditioning from CETEIcean to Verovio.
+It requires only a simple webserver to work (e.g. GitHub Pages).
+
+### GitHub Pages Live Demo
+
+https://tei-music-sig.github.io/examples/ceteicean-verovio/
+
+### How it works
+
+- `index.html` includes CSS stylesheets, CETEIcean, Verovio and a TEI base file, and it manages the rendition process with a little JavaScript.
+- TEI is rendered by CETEIcean.
+- CETEIcean It prefixes all elements with `tei-` to make them directly styleable with CSS, without interfering with HTML.
+- MEI is rendered by Verovio. MEI files are kept separately in the `mei` folder.
+- Verovio is triggered when a `<notatedMusic>` element in TEI contains `@rend="MEI"` and `@xml:id` corresponds to a filename in `/mei` (without extension).
+
+### How to customize
+
+- download the minimal example
+- put a TEI base document in the main folder
+- modify presentation of text elements in `/css/custom.css` using `tei-*`
+- put your MEI snippets in the `/mei`
+- refer MEI files by `<notatedMusic xml:id="[filename]" rend="MEI">`
+- call `index.html` (or just the base directory) in your browser
