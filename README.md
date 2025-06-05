@@ -15,16 +15,16 @@ https://tei-music-sig.github.io/examples/ceteicean-verovio/
 ### How it works
 
 - `index.html` includes CSS stylesheets, CETEIcean, Verovio and a TEI base file, and it manages the rendition process with a little JavaScript.
-- TEI is rendered by CETEIcean.
+- TEI is rendered by CETEIcean. TEI files are kept separate in the `tei` folder.
 - CETEIcean It prefixes all elements with `tei-` to make them directly styleable with CSS, without interfering with HTML.
 - MEI is rendered by Verovio. MEI files are kept separately in the `mei` folder.
 - Verovio is triggered when a `<notatedMusic>` element in TEI contains `@rend="MEI"` and `@xml:id` corresponds to a filename in `/mei` (without extension).
 
 ### How to customize
 
-- download the minimal example
-- put a TEI base document in the main folder
-- modify presentation of text elements in `/css/custom.css` using `tei-*`
-- put your MEI snippets in the `/mei`
-- refer MEI files by `<notatedMusic xml:id="[filename]" rend="MEI">`
-- call `index.html` (or just the base directory) in your browser
+- Download the minimal example.
+- Put your TEI document in the `tei` folder.
+- Modify the stylesheet in `/css/custom.css` using `tei-*`
+- Put your MEI snippets in the `mei` folder.
+- Refer MEI files in the TEI by `<notatedMusic xml:id="[filename]" rend="MEI">`.
+- Call `index.html` (or just the base directory) in your browser.
