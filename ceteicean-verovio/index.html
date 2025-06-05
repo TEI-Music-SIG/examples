@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-    <title>My project</title>
+    <title>CETEIcean and Verovio</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/CETEIcean.css" media="all" />
     <link rel="stylesheet" href="css/custom.css" media="all" />
@@ -35,7 +35,7 @@
 		    const musicElements = document.querySelectorAll('tei-notatedMusic[rend="MEI"]');
 		    musicElements.forEach(node => {
 		        if (node.id && !node.dataset.processed) {
-					node.dataset.processed = 'true'; // Verhindert doppelte Verarbeitung
+					node.dataset.processed = 'true'; // avoid multiple processing
 		            const fileName = `mei/${node.id}.mei`; // dynamic filename
 					fetch(fileName)
 		                .then(response => response.text())
@@ -46,10 +46,10 @@
 		                .catch(error => console.error('Error fetching MEI file:', error));
 		        }
 		    });
-		    // Fordere den nächsten Frame an, um fortzufahren
+		    // get next frame and proceed
 		    requestAnimationFrame(checkDOMAndProcess);
 		}
-		// Starte die Überprüfung, sobald die DOM-Inhalte verfügbar sind
+		// start DOM checker when DOM content is ready
 		document.addEventListener('DOMContentLoaded', checkDOMAndProcess);
     </script>
   </body>

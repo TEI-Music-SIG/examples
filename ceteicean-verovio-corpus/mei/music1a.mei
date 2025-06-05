@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1">
+	<meiHead>
+		<fileDesc>
+			<titleStmt>
+				<title />
+			</titleStmt>
+			<pubStmt/>
+		</fileDesc>
+		<encodingDesc/>
+	</meiHead>
+	<music>
+		<body>
+			<mdiv xml:id="pxft10n">
+				<score xml:id="uwmzjoe">
+					<scoreDef xml:id="d136ea50" tempo.dist="3vu">
+						<staffGrp xml:id="r18e21hv">
+							<staffDef xml:id="staffdef-L1F1" n="1" lines="5">
+								<clef xml:id="clef-L2F1" shape="G" line="2" />
+								<keySig xml:id="keysig-L3F1" mode="minor" sig="1f" pname="d" />
+								<meterSig xml:id="metersig-L5F1" count="2" sym="common" unit="2" />
+							</staffDef>
+						</staffGrp>
+					</scoreDef>
+					<section xml:id="section-L1F1">
+						<measure xml:id="measure-L1" n="1">
+							<staff xml:id="staff-L1F1" n="1">
+								<layer xml:id="layer-L1F1N1" n="1">
+									<note xml:id="note-L8F1" dur="2" oct="4" pname="d" accid.ges="n" />
+									<note xml:id="note-L9F1" dur="2" oct="4" pname="a" accid.ges="n" />
+								</layer>
+							</staff>
+						</measure>
+						<measure xml:id="measure-L10" n="2">
+							<staff xml:id="staff-L10F1N1" n="1">
+								<layer xml:id="layer-L10F1N1" n="1">
+									<note xml:id="note-L11F1" dur="2" oct="4" pname="f" accid.ges="n" />
+									<note xml:id="note-L12F1" dur="2" oct="4" pname="d" accid.ges="n" />
+								</layer>
+							</staff>
+						</measure>
+					</section>
+				</score>
+			</mdiv>
+		</body>
+	</music>
+</mei>

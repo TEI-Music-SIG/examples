@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>CETEIcean, Verovio and a Text Corpus</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/CETEIcean.css" media="all" />
+    <link rel="stylesheet" href="css/custom.css" media="all" />
+	<script src="js/querystring.js"></script>
+    <script src="js/CETEI.js"></script>
+    <script src="js/verovio.js"></script>
+  </head>
+
+  <body>
+    <!-- header for all pages -->
+	<h1>CETEIcean, Verovio and a Text Corpus</h1>
+	<nav>Navigation: <a href=".">TOC</a></nav>
+  	<!-- container for TEI document -->
+    <div id="TEI"></div>
+  	<!-- rendition -->
+  	<script>
+		/* query */
+		filename = ( QueryString.doc == null )
+			? ( "index.xml" )
+			: ( QueryString.doc + ".xml" );
+  		/* CETEIcean */
+		var CETEIcean = new CETEI()
+			CETEIcean.getHTML5("tei/"+filename, function(data) {
+			document.getElementById("TEI").appendChild(data)
+		})
+		CETEIcean.addBehaviors({
+			"tei":{
+				"teiHeader": null,
+				"item": [ "<a href=\"?doc=$@xml:id\">", "</a>" ]
+			}
+		});
+		/* Verovio */
+		var vrvToolkit = new verovio.toolkit()
+			vrvToolkit.setOptions(options = {
+				pageHeight: 500,
+				pageWidth: 1000,
+				ignoreLayout: 1,
+				border: 20,
+				scale: 50,
+				adjustPageHeight: true
+		})
+		/* DOM checker */
+		function checkDOMAndProcess() {
+		    const musicElements = document.querySelectorAll('tei-notatedMusic[rend="MEI"]');
+		    musicElements.forEach(node => {
+		        if (node.id && !node.dataset.processed) {
+					node.dataset.processed = 'true'; // avoid multiple processing
+		            const fileName = `mei/${node.id}.mei`; // dynamic filename
+					fetch(fileName)
+		                .then(response => response.text())
+		                .then(data => {
+		                    const svg = vrvToolkit.renderData(data, {});
+		                    node.innerHTML = svg;
+		                })
+		                .catch(error => console.error('Error fetching MEI file:', error));
+		        }
+		    });
+		    // get next frame and proceed
+		    requestAnimationFrame(checkDOMAndProcess);
+		}
+		// start DOM checker when DOM content is ready
+		document.addEventListener('DOMContentLoaded', checkDOMAndProcess);
+    </script>
+  </body>
+
+</html>

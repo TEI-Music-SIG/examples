@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>First TEI File</title>
+			</titleStmt>
+			<publicationStmt>
+				<p/>
+			</publicationStmt>
+			<sourceDesc>
+				<p/>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<head>First TEI File</head>
+			<div>
+				<p>Lorem ipsum</p>
+			</div>
+			<notatedMusic rend="MEI" xml:id="music1a"/>
+			<div>
+				<p>dolor sit amet</p>
+			</div>
+			<notatedMusic rend="MEI" xml:id="music1b"/>
+			<div>
+				<p>consectetur adipiscing elit</p>
+			</div>
+		</body>
+	</text>
+</TEI>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>Table of Contents</title>
+			</titleStmt>
+			<publicationStmt>
+				<p/>
+			</publicationStmt>
+			<sourceDesc>
+				<p/>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<list>
+				<head>Table of Contents</head>
+				<item xml:id="text1">
+					<bibl>First TEI File</bibl>
+				</item>
+				<item xml:id="text2">
+					<bibl>Second TEI File</bibl>
+				</item>
+			</list>
+		</body>
+	</text>
+</TEI>
