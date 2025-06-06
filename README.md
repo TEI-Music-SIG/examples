@@ -2,15 +2,13 @@
 
 This is a collection of examples, covering various usecases for MEI encoded music notation in TEI encoded text files.
 
-## CETEIcean and Verovio
+## CETEIcean + Verovio
 
 [ceteicean-verovio](ceteicean-verovio) contains a minimal example that allows using [CETEIcean](https://teic.github.io/CETEIcean) and [Verovio](https://www.verovio.org) together.
 
 It requires only a simple webserver to work (e.g. GitHub Pages).
 
-### GitHub Pages Live Demo
-
-https://tei-music-sig.github.io/examples/ceteicean-verovio/
+Live Demo: https://tei-music-sig.github.io/examples/ceteicean-verovio/
 
 ### How it works
 
@@ -28,3 +26,9 @@ https://tei-music-sig.github.io/examples/ceteicean-verovio/
 - Put your MEI snippets in the `mei` folder.
 - Refer MEI files in the TEI by `<notatedMusic xml:id="[filename]" rend="MEI">`.
 - Call `index.html` (or just the base directory) in your browser.
+
+## CETEIcean + Verovio + Corpus
+
+[ceteicean-verovio-corpus](ceteicean-verovio-corpus) contains everything above for multiple TEI documents.
+
+Live Demo: https://tei-music-sig.github.io/examples/ceteicean-verovio/
