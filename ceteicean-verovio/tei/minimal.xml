@@ -19,13 +19,11 @@
 			<div>
 				<p>Lorem ipsum</p>
 			</div>
-			<!-- @rend triggers Verovio -->
-			<!-- @xml:id needs to correspond to the MEI filename -->
-			<notatedMusic rend="MEI" xml:id="music1"/>
+			<notatedMusic rend="MEI" source="music1.mei"/>
 			<div>
 				<p>dolor sit amet</p>
 			</div>
-			<notatedMusic rend="MEI" xml:id="music2"/>
+			<notatedMusic rend="MEI" source="music2.mei"/>
 			<div>
 				<p>consectetur adipiscing elit</p>
 			</div>

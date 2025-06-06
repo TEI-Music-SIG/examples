@@ -19,11 +19,11 @@
 			<div>
 				<p>Lorem ipsum</p>
 			</div>
-			<notatedMusic rend="MEI" xml:id="music2a"/>
+			<notatedMusic rend="MEI" source="music2a.mei"/>
 			<div>
 				<p>dolor sit amet</p>
 			</div>
-			<notatedMusic rend="MEI" xml:id="music2b"/>
+			<notatedMusic rend="MEI" source="music2b.mei"/>
 			<div>
 				<p>consectetur adipiscing elit</p>
 			</div>

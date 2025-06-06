@@ -34,9 +34,9 @@
 		function checkDOMAndProcess() {
 		    const musicElements = document.querySelectorAll('tei-notatedMusic[rend="MEI"]');
 		    musicElements.forEach(node => {
-		        if (node.id && !node.dataset.processed) {
+		        if (node.getAttribute(`source`) && !node.dataset.processed) {
 					node.dataset.processed = 'true'; // avoid multiple processing
-		            const fileName = `mei/${node.id}.mei`; // dynamic filename
+		            const fileName = `mei/`+node.getAttribute(`source`); // dynamic filename
 					fetch(fileName)
 		                .then(response => response.text())
 		                .then(data => {
