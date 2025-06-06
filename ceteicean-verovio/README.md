@@ -21,4 +21,4 @@ Live Demo: https://tei-music-sig.github.io/examples/ceteicean-verovio/
 - Refer MEI files in the TEI by `<notatedMusic xml:id="[filename]" rend="MEI">`.
 - Call `index.html` (or just the base directory) in your browser.
 
-If you would like to display more than one TEI file, try [ceteicean-verovio-corpus](ceteicean-verovio-corpus).
+If you would like to display more than one TEI file, try [../ceteicean-verovio-corpus](ceteicean-verovio-corpus).
