@@ -1,34 +1,13 @@
 # TEI/MEI Examples
 
-This is a collection of examples, covering various usecases for MEI encoded music notation in TEI encoded text files.
+This is a collection of examples, covering various scenarios for presenting sources that contain both text and music (in TEI and MEI respectively).
 
-## CETEIcean + Verovio
+The example use common libraries [CETEIcean](https://teic.github.io/CETEIcean) and [Verovio](https://www.verovio.org) together. JavaScript is used to make them work together fluently. Hosting requirements are just a simple webserver (e.g. as provided by GitHub Pages, or local host).
 
-[ceteicean-verovio](ceteicean-verovio) contains a minimal example that allows using [CETEIcean](https://teic.github.io/CETEIcean) and [Verovio](https://www.verovio.org) together.
+## one TEI file + multiple MEI snippets
 
-It requires only a simple webserver to work (e.g. GitHub Pages).
+[ceteicean-verovio](ceteicean-verovio): a minimal example to display one TEI file with multiple sections of musical notation within.
 
-Live Demo: https://tei-music-sig.github.io/examples/ceteicean-verovio/
+## multiple TEI file + multiple MEI snippets
 
-### How it works
-
-- `index.html` includes CSS stylesheets, CETEIcean, Verovio and a TEI base file, and it manages the rendition process with a little JavaScript.
-- TEI is rendered by CETEIcean. TEI files are kept separate in the `tei` folder.
-- CETEIcean It prefixes all elements with `tei-` to make them directly styleable with CSS, without interfering with HTML.
-- MEI is rendered by Verovio. MEI files are kept separately in the `mei` folder.
-- Verovio is triggered when a `<notatedMusic>` element in TEI contains `@rend="MEI"` and `@xml:id` corresponds to a filename in `/mei` (without extension).
-
-### How to customize
-
-- Download the minimal example.
-- Put your TEI document in the `tei` folder.
-- Modify the stylesheet in `/css/custom.css` using `tei-*`
-- Put your MEI snippets in the `mei` folder.
-- Refer MEI files in the TEI by `<notatedMusic xml:id="[filename]" rend="MEI">`.
-- Call `index.html` (or just the base directory) in your browser.
-
-## CETEIcean + Verovio + Corpus
-
-[ceteicean-verovio-corpus](ceteicean-verovio-corpus) contains everything above for multiple TEI documents.
-
-Live Demo: https://tei-music-sig.github.io/examples/ceteicean-verovio-corpus/
+[ceteicean-verovio-corpus](ceteicean-verovio-corpus): similar to ceteicean-verovio, but for more than one TEI document.
