@@ -31,4 +31,4 @@ Live Demo: https://tei-music-sig.github.io/examples/ceteicean-verovio/
 
 [ceteicean-verovio-corpus](ceteicean-verovio-corpus) contains everything above for multiple TEI documents.
 
-Live Demo: https://tei-music-sig.github.io/examples/ceteicean-verovio/
+Live Demo: https://tei-music-sig.github.io/examples/ceteicean-verovio-corpus/
