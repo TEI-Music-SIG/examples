@@ -1,6 +1,6 @@
 # CETEIcean + Verovio for more TEI files
 
-A minimal example to display TEI files with multiple sections of musical notation within. Similar to [ceteicean-verovio](ceteicean-verovio), but supports more than one TEI file.
+A minimal example to display TEI files with multiple sections of musical notation within. Similar to [../ceteicean-verovio](ceteicean-verovio), but supports more than one TEI file.
 
 Live Demo: https://tei-music-sig.github.io/examples/ceteicean-verovio-corpus/
 
@@ -11,5 +11,5 @@ Live Demo: https://tei-music-sig.github.io/examples/ceteicean-verovio-corpus/
 
 ### How to customize
 
-- see [ceteicean-verovio](ceteicean-verovio)
+- see [../ceteicean-verovio](ceteicean-verovio)
 - the table of contents is provided in `tei/index.xml`
