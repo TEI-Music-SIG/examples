@@ -16,6 +16,7 @@ Live Demo: https://tei-music-sig.github.io/examples/ceteicean-verovio/
 
 - Download the minimal example.
 - Put your TEI document in the `tei` folder.
+- Rename the reference from CETEICEAN to that TEI file in `index.html` accordingly.
 - Modify the stylesheet in `/css/custom.css` using `tei-*`
 - Put your MEI snippets in the `mei` folder.
 - Refer MEI files in the TEI by `<notatedMusic source="[filename]" rend="MEI">`.
