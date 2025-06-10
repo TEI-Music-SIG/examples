@@ -10,7 +10,7 @@ Live Demo: https://tei-music-sig.github.io/examples/ceteicean-verovio/
 - TEI is rendered by CETEIcean. TEI files are kept separate in the `tei` folder.
 - CETEIcean It prefixes all elements with `tei-` to make them directly styleable with CSS, without interfering with HTML.
 - MEI is rendered by Verovio. MEI files are kept separately in the `mei` folder.
-- Verovio is triggered when a `<notatedMusic>` element in TEI contains `@rend="MEI"` and `source` corresponds to a filename in `/mei` (with file extension).
+- Verovio is triggered when a `<notatedMusic>` element in TEI contains `@rend="MEI"` and `@source` corresponds to a filename in `/mei` (with file extension).
 
 ### How to customize
 
