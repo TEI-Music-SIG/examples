@@ -8,6 +8,6 @@ The example use common libraries [CETEIcean](https://teic.github.io/CETEIcean) a
 
 [ceteicean-verovio](ceteicean-verovio) contains a minimal example to display one TEI file with multiple sections of musical notation within.
 
-## multiple TEI file + multiple MEI snippets
+## multiple TEI files + multiple MEI snippets
 
 [ceteicean-verovio-corpus](ceteicean-verovio-corpus) works similarly to ceteicean-verovio, but for more than one TEI document.
