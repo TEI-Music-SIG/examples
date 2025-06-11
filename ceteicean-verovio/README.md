@@ -15,6 +15,7 @@ Live Demo: https://tei-music-sig.github.io/examples/ceteicean-verovio/
 ### How to customize
 
 - Download the minimal example.
+- Put all files into a directory served by Apache or Nginx (local or remote).
 - Put your TEI document in the `tei` folder.
 - Modify the stylesheet in `/css/custom.css` using `tei-*`
 - Put your MEI snippets in the `mei` folder.
