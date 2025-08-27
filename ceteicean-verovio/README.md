@@ -1,4 +1,4 @@
-# CETEIcean + Verovio for one TEI file
+# CETEIcean + Verovio for one TEI file 📄🎵🎵
 
 A minimal example to display one TEI file with multiple sections of musical notation within.
 
@@ -24,3 +24,5 @@ Live Demo: https://tei-music-sig.github.io/examples/ceteicean-verovio/
 - Call `index.html` (or just the base directory) in your browser.
 
 If you would like to display more than one TEI file, try [ceteicean-verovio-corpus](../ceteicean-verovio-corpus).
+
+If you would like to include other notation modes like formulas and diagrams, try [ceteicean-verovio-mathjax](../ceteicean-verovio-mathjax) or  [ceteicean-verovio-mathjax-svg](../ceteicean-verovio-mathjax-svg).
