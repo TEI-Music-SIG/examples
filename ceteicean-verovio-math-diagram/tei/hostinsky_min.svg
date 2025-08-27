@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="400 200 1200 400" width="800" height="400" id="svg">
+	<g stroke="black">
+		<line x1="520" y1="205" x2="545" y2="230" stroke-width="2"/>
+		<line x1="575" y1="230" x2="600" y2="205" stroke-width="2"/>
+		<line x1="480" y1="245" x2="540" y2="245" stroke-width="2"/>
+		<line x1="580" y1="245" x2="640" y2="245" stroke-width="2"/>
+		<line x1="520" y1="285" x2="545" y2="260" stroke-width="2"/>
+		<line x1="575" y1="260" x2="600" y2="285" stroke-width="2"/>
+	</g>
+	<text font-size="25" font-family="serif" x="495" y="200" style="font-style:italic; text-decoration:overline;">as</text>
+	<text font-size="25" font-family="serif" x="595" y="200" style="font-style:italic; text-decoration:overline;">es</text>
+	<text font-size="25" font-family="serif" x="450" y="250" style="font-style:italic">f</text>
+	<text font-size="25" font-family="serif" x="550" y="250" style="font-style:italic; font-weight:bold;">C</text>
+	<text font-size="25" font-family="serif" x="650" y="250" style="font-style:italic">g</text>
+	<text font-size="25" font-family="serif" x="500" y="300" style="font-style:italic; text-decoration:underline;">a</text>
+	<text font-size="25" font-family="serif" x="600" y="300" style="font-style:italic; text-decoration:underline;">e</text>
+</svg>
