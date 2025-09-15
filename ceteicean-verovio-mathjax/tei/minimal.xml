@@ -3,7 +3,7 @@
 	<teiHeader>
 		<fileDesc>
 			<titleStmt>
-				<title>Minimal Example: CETEIcean and Verovio</title>
+				<title>Minimal Example: CETEIcean, Verovio and MathJax</title>
 			</titleStmt>
 			<publicationStmt>
 				<p/>
@@ -15,7 +15,7 @@
 	</teiHeader>
 	<text>
 		<body>
-			<head>Minimal Example: CETEIcean and Verovio</head>
+			<head>Minimal Example: CETEIcean, Verovio and MathJax</head>
 			<div>
 				<p>Lorem ipsum</p>
 			</div>
@@ -25,15 +25,9 @@
 			</div>
 			<notatedMusic rend="MEI" source="music2.mei"/>
 			<div>
-				<p>consectetur adipiscing elit</p>
-				
+				<p>consectetur adipiscing elit <formula notation="tex">\(E=mc^2\)</formula></p>
+				<p><formula notation="tex">$$x = \frac {-b \pm \sqrt{b^2 -4ac}} {2a}$$</formula></p>
 			</div>
-			<div> Math
-			<p>inline: <formula notation="tex">\(E=mc^2\)</formula></p>
-			<p>standalone (centered): <formula notation="tex">$$x = \frac {-b \pm \sqrt{b^2 -4ac}} {2a}$$</formula></p>
-
-			</div>
-
 		</body>
 	</text>
 </TEI>

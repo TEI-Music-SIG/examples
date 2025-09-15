@@ -3,7 +3,7 @@
 	<teiHeader>
 		<fileDesc>
 			<titleStmt>
-				<title>Minimal Example: CETEIcean and Verovio</title>
+				<title>Minimal Example: CETEIcean, Verovio, MathJax and SVG</title>
 			</titleStmt>
 			<publicationStmt>
 				<p/>
@@ -15,7 +15,7 @@
 	</teiHeader>
 	<text>
 		<body>
-			<head>Minimal Example: CETEIcean and Verovio</head>
+			<head>Minimal Example: CETEIcean, Verovio, MathJax and SVG</head>
 			<div>
 				<p>Lorem ipsum</p>
 			</div>

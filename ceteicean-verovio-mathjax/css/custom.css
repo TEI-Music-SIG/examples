@@ -3,3 +3,7 @@
 tei-teiHeader {
   display: none;
 }
+
+tei-text {
+	width:36em;
+}
