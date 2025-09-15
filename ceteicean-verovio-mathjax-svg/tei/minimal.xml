@@ -30,8 +30,8 @@
 			</div>
 			<div>
 				<p>Aenean commodo ligula eget dolor:</p>
-				<figure style="text-align: left;">
-					<graphic url="hostinsky_min.svg"/>
+				<figure>
+					<graphic url="../svg/diagram1.svg"/>
 				</figure>
 			</div>
 		</body>
