@@ -2,12 +2,10 @@
 <html lang="en">
 
   <head>
-    <title>CETEIcean and Verovio</title>
+    <title>CETEIcean & Verovio & MathJax & SVG</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/CETEIcean.css" media="all" />
     <link rel="stylesheet" href="css/custom.css" media="all" />
-    <script src="js/CETEI.js"></script>
-    <script src="js/verovio-toolkit.js"></script>
 	<script> 
 		MathJax = {
 			options: {
@@ -16,6 +14,8 @@
 		};
 	</script>
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="js/CETEI.js"></script>
+    <script src="js/verovio-toolkit.js"></script>
   </head>
 
   <body>
@@ -23,43 +23,78 @@
     <div id="TEI"></div>
   	<!-- rendition -->
   	<script>
-  		/* CETEIcean */
+		/* CETEIcean */
 		var CETEIcean = new CETEI()
 			CETEIcean.getHTML5("tei/minimal.xml", function(data) {
 			document.getElementById("TEI").appendChild(data)
 		})
+
 		/* Verovio */
-		var vrvToolkit = new verovio.toolkit()
-			vrvToolkit.setOptions(options = {
-				pageHeight: 500,
-				pageWidth: 1000,
-				ignoreLayout: 1,
-				border: 20,
-				scale: 50,
-				adjustPageHeight: true
-		})
-		/* DOM checker */
-		function checkDOMAndProcess() {
-		    const musicElements = document.querySelectorAll('tei-notatedMusic[rend="MEI"]');
-		    musicElements.forEach(node => {
-		        if (node.getAttribute(`source`) && !node.dataset.processed) {
-					node.dataset.processed = 'true'; // avoid multiple processing
-		            const fileName = `mei/`+node.getAttribute(`source`); // dynamic filename
-					fetch(fileName)
-		                .then(response => response.text())
-		                .then(data => {
-		                    const svg = vrvToolkit.renderData(data, {});
-		                    node.innerHTML = svg;
-		                })
-		                .catch(error => console.error('Error fetching MEI file:', error));
-		        }
-		    });
-		    // get next frame and proceed
-		    requestAnimationFrame(checkDOMAndProcess);
+		const vrvToolkit = new verovio.toolkit();
+		vrvToolkit.setOptions({
+			pageHeight: 200,
+			pageWidth: 1300,
+			ignoreLayout: 1,
+			border: 20,
+			scale: 50,
+			adjustPageHeight: true
+		});
+
+		/* processor definitions */
+		const processors = [
+		{
+			name: 'mei',
+			selector: 'tei-notatedMusic[rend="mei"]',
+			async process(node) {
+				const source = node.getAttribute('source');
+				if (!source) return;
+				const response = await fetch('mei/' + source);
+				const data = await response.text();
+				node.innerHTML = vrvToolkit.renderData(data, {});
+			}
+		},
+		{
+			name: 'svg',
+			selector: 'tei-graphic[rend="svg"]',
+			async process(node) {
+				const url = node.getAttribute('url');
+				if (!url) return;
+				const response = await fetch('svg/' + url);
+				const svg = await response.text();
+				node.innerHTML = svg;
+			}
+		},
+		{
+			name: 'tex',
+			selector: 'tei-formula, tei-p[rend="latex"], .math',
+			async process(node) {
+				if (window.MathJax && MathJax.typesetPromise) {
+					await MathJax.typesetPromise([node]);
+				}
+			}
 		}
-		// start DOM checker when DOM content is ready
-		document.addEventListener('DOMContentLoaded', checkDOMAndProcess);
-    </script>
+		];
+		
+		/* DOM processing */
+		async function processDOM() {
+			for (const processor of processors) {
+				const nodes = document.querySelectorAll(processor.selector);
+				for (const node of nodes) {
+					const key = 'processed' + processor.name;
+					if (!node.dataset[key]) {
+						node.dataset[key] = 'true';
+						try {
+							await processor.process(node);
+						} catch (error) {
+							console.error(`Error in ${processor.name}:`, error, node);
+						}
+					}
+				}
+			}
+			requestAnimationFrame(processDOM);
+		}
+		document.addEventListener('DOMContentLoaded', processDOM);
+  	</script>
   </body>
 
 </html>

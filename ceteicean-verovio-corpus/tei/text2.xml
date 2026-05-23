@@ -19,11 +19,11 @@
 			<div>
 				<p>Lorem ipsum</p>
 			</div>
-			<notatedMusic rend="MEI" source="music2a.mei"/>
+			<notatedMusic rend="mei" source="music2a.mei"/>
 			<div>
 				<p>dolor sit amet</p>
 			</div>
-			<notatedMusic rend="MEI" source="music2b.mei"/>
+			<notatedMusic rend="mei" source="music2b.mei"/>
 			<div>
 				<p>consectetur adipiscing elit</p>
 			</div>
